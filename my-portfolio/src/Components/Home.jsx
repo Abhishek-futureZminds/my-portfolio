@@ -1,10 +1,27 @@
-function Home () {
-  return (
-    <div>
-      <h1>Welcome to my portfolio!</h1>
-      <p>Feel free to browse around and learn more about me.</p>
-    </div>
-  );
-}
+
+  import  { useEffect, useState } from 'react';
+  
+    function Home() {
+    const [displayText, setDisplayText] = useState('');
+    const fullText = 'Welcome to my portfolio! Feel free to browse around and learn more about me.';
+
+    useEffect(() => {
+      let index = 0;
+      const interval = setInterval(() => {
+        setDisplayText((prev) => prev + fullText[index]);
+        index++;
+        if (index === fullText.length) {
+          clearInterval(interval);
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }, []);
+
+    return (
+      <div>
+        <h1>{displayText}</h1>
+      </div>
+    );
+  }
 
 export default Home;
