@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
   
     function Home() {
     const [displayText, setDisplayText] = useState('');
-    const master = 'Welcome to my portfolio! Feel free to browse around and learn more about me.';
+    const fullText = 'Welcome to my portfolio! Feel free to browse around and learn more about me.';
 
     useEffect(() => {
       let index = 0;
