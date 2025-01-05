@@ -6,6 +6,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000; /* Ensure the navbar is on top of other elements */
+  font-family: 'Courier New', Courier, monospace;
 }
 
 nav ul {
@@ -21,7 +22,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: bisque;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
