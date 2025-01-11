@@ -1,9 +1,10 @@
 
 import { useEffect, useState } from 'react';
+import '../CSS/Home.css'
   
     function Home() {
-    const [displayText, setDisplayText] = useState('');
-    const fullText = 'Welcome to my portfolio! Feel free to browse around and learn more about me.';
+    const [displayText, setDisplayText] = useState(''); //
+    const fullText = 'Welcome to my portfolio!';
 
     useEffect(() => {
       let index = 0;
