@@ -6,9 +6,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home />
-
+      {/* <Navbar /> */}
+      <Home d={5} m={8} y={2021} /> 
     </>
   );
 }

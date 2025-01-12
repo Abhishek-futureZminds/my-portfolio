@@ -1,28 +1,19 @@
+import '../CSS/Home.css';
 
-import { useEffect, useState } from 'react';
-import '../CSS/Home.css'
-  
-    function Home() {
-    const [displayText, setDisplayText] = useState(''); //
-    const fullText = 'Welcome to my portfolio!';
+// import { useState } from 'react';
 
-    useEffect(() => {
-      let index = 0;
-      const interval = setInterval(() => {
-        setDisplayText((prev) => prev + fullText[index]);
-        index++;
-        if (index === fullText.length) {
-          clearInterval(interval);
-        }
-      }, 100);
-      return () => clearInterval(interval);
-    }, []);
+function Home({ d, m, y }) {
+  const date = new Date();
+  let day = date.getDate() - d < 0 ? date.getDate() - d + 30 : date.getDate() - d;
+  let month = date.getMonth() + 1 - m < 0 ? date.getMonth() + 1 - m + 12 : date.getMonth() + 1 - m;
+  let year = date.getMonth() + 1 - m < 0 ? date.getFullYear() - y - 1 : date.getFullYear() - y;
 
-    return (
-      <div>
-        <h1>{displayText}</h1>
-      </div>
-    );
-  }
+  return (
+    <div className='Kru'>
+      <h1>Hey there , I’m Aji!!</h1>
+      <h1> A software developer building apps and and websites for over  {year} years {month} months and {day} days now!!!</h1>
+    </div>
+  );
+}
 
 export default Home;
