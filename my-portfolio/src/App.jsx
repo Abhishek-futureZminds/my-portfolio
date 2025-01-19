@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Footer />
       <Home d={5} m={8} y={2021} /> 
       
